@@ -21,6 +21,8 @@ ls -d source/_posts/archives/* | xargs perl -pi -e 's|(?<!^)(?<![~`!@#$%^&*()\-_
 
 因为替换时的正则表达式用到了[零宽正回顾断言](/hexoprograming/regex/)，所以，并不会影响英文和代码的正常显示。
 
+但是，不管怎样，还是要记得先把文章备份。
+
 ### 替换前：
 ![从WordPress导入过来的没回车的文章](/images/2018/10/content-no-return.jpg)
 
