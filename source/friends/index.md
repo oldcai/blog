@@ -1,10 +1,10 @@
 ---
-title: friends
+title: 友链
 ---
 
-因为搬迁到了 Hexo，所以首页暂时还不知道怎么摆放友链，
+因为博客搬迁到了 Hexo，首页不方便摆放友链，
 
-先在此处展示：
+友链在此处展示：
 
 [无心呢喃](http://www.wxnn.org/)
 [ZZZero](http://www.zz-zero.com/)
