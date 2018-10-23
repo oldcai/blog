@@ -92,7 +92,7 @@ theme_config:
 
   nav:
     home: /
-    about: /about/
+    Friends: /friends/
     articles: /archives/
     search: /search/
 
