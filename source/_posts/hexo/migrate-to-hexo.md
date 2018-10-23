@@ -10,7 +10,7 @@ tags:
   - WordPress
 ---
 
-## 不骄傲地使用WordPress
+## 并不骄傲地使用着WordPress
 
 转到 Hexo 后，翻看之前的档案，发现从2011年搭建 WordPress 开始，到现在已经第八个年头了。
 
