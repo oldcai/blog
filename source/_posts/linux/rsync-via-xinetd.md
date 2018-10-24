@@ -1,5 +1,5 @@
 ---
-title: Using rsyncd Service on Demand via Xinetd
+title: Run rsync Service Only When Needed By Using xinetd
 categories:
   - linux
 tags:
@@ -8,19 +8,19 @@ tags:
 date: 2018-10-24 21:33:00
 ---
 
-## Why not use rsyncd service directly
+## Why Not Use Rsyncd Service Directly
 
 We do not need `rsyncd` keep running and cost our precious memory, in fact most of us only use it once in a while for backup.
 
 So we need a way to keep our sync service on without the `rsyncd` process.
 
-## What is xinetd
+## What Is Xinetd
 
-`xinetd` is a service that can open network based services only when they are called.
+`xinetd` is a service that can open network based services only when they are connected.
 
 When `xinetd` listens to a port, while the traffic comes in, `xinetd` could launch the real service program and transfer traffic to it.
 
-## How to config it to launch rsync
+## How to Config xinetd Work With rsync
 
 We can create a file `/etc/xinetd.d/rsync` filled with codes below.
 
