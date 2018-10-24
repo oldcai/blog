@@ -1,13 +1,13 @@
 ---
 title: atop，调查服务器宕机事件的神器
-tags:
-  - atop
-url: 1226.html
-id: 1226
 categories:
   - linux
   - 服务器运维
   - 软件评测
+tags:
+  - atop
+url: 1226.html
+id: 1226
 date: 2018-10-20 17:44:52
 ---
 
