@@ -86,11 +86,7 @@ deploy:
 
 disqus_shortname: oldcai
 
-baidusitemap:
-    path: baidusitemap.xml
-
 theme_config:
-
   nav:
     home: /
     Friends: /friends/
