@@ -114,4 +114,4 @@ theme_config:
   social_links:
     github: https://github.com/oldcai/
     twitter: https://twitter.com/oldcai
-    mail: mailto:oldcai@live.com
+    mail: javascript:window.open(atob('bWFpbHRvOm9sZGNhaUBsaXZlLmNvbQ'))
