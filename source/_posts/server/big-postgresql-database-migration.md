@@ -19,9 +19,9 @@ Then switch the slave server to master.
 
 ### Situation
 
-In our case, the database is bigger than 200GB, it would take at least 3 hours to migrate to a new server, including export, transfer and import.
+In our case, the database is almost 300GB, it would take at least 3 hours to migrate to a new server, including export, transfer and import time.
 
-Sometimes, it's acceptable to shutdown sites or apps to maintain for a short time, but what if the data grows bigger and migration takes days or even weeks?
+Sometimes, it's acceptable to shutdown sites or apps for a short time to do some maintain, but what if the data grows and the migration may takes days or weeks?
 
 For services in-production, you would expect it always online.
 
