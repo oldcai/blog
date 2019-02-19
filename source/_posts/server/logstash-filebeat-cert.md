@@ -1,4 +1,11 @@
-# Filebeat Not Able To Connect Logstash
+---
+title: Filebeat Not Able to Connect to Logstash
+date: 2018-12-14 06:35:00
+categories:
+  - Server
+tags:
+  - ELK
+---
 
 ## Possible Errors:
 
