@@ -20,6 +20,6 @@ We can update Oh My Zsh by adding this line below to crontab.
 
 Normally, crontab can be modified by command `crontab -e`
 
-And we can add this line to `.zshrc` to forbid Oh My Zsh asks us for permitting update.
-
 `DISABLE_AUTO_UPDATE=true`
+
+After all, we can add the line above to `.zshrc` to forbid Oh My Zsh asks us for update.
