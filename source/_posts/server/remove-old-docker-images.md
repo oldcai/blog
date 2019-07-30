@@ -1,14 +1,17 @@
 ---
-title: Remove docker images older than one week/month/year Automaticlly
-date: 2019-02-20 02:29:00
+title: Remove Docker Images Older Than One week/month/year Automatically
+date: 2019-07-30 16:26
 categories:
   - Server
 tags:
-  - zsh
+  - CI
+  - Docker
+  - Rancher
+  - Kubernetes
 ---
 
 ## Reason
-I'm using rancher pipeline to deploy my service continually, it always creates a new image but never clean it.
+I'm using rancher pipeline to deploy my service continually, it always creates a new image but never cleans it.
 
 I believe other continuous integration solutions would do the same, so I'm going to share some lines of code to deal with it.
 
@@ -18,7 +21,8 @@ Let's say, the project I'm going to build is named 'GetShitDone'.
 
 The way to clear old images is as simple as copy and paste the codes below.
 
-> The images that are still in use would be protected and wouldn't be removed, so it's safe to use these commands.
+> The images that are still in use would be protected and wouldn't be removed. 
+> It's safe to use these commands.
 
 
 ### Remove images older than 1 week
