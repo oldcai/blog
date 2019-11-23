@@ -25,7 +25,9 @@ tags:
 https://browser.geekbench.com/v5/cpu/653517
 
 CPU 观察工具：[intel Power Gadget](https://software.intel.com/en-us/articles/intel-power-gadget)
-![](media/15745092068276.jpg)
+
+![](http://img.oldcai.com/mweb/15745123442971.jpg)
+
 
 CPU Benchmark跑分工具：[Geekbench 5试用版](https://www.geekbench.com/)
 
