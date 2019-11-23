@@ -1,5 +1,5 @@
 ---
-title: 微星mag z390 tomahawk战斧导弹 + i5 9600kf EFI
+title: 微星MAG Z390 TOMAHAWK战斧导弹 + i5 9600kf EFI
 date: 2019-11-23 19:39:40
 categories:
   - Mac
@@ -31,3 +31,6 @@ CPU 观察工具：[intel Power Gadget](https://software.intel.com/en-us/article
 
 CPU Benchmark跑分工具：[Geekbench 5试用版](https://www.geekbench.com/)
 
+这个EFI，同样的主板(微星MAG Z390 TOMAHAWK战斧导弹)应该都能用。
+
+碰到其他什么问题，可以留言讨论。

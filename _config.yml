@@ -81,7 +81,8 @@ theme: cactus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@git.dev.tencent.com:oldcai/oldcai.com.git
+  repo: git@github.com:oldcai/www.oldcai.com.git
+  #repo: git@git.dev.tencent.com:oldcai/oldcai.com.git
   branch: master
 
 disqus_shortname: oldcai
