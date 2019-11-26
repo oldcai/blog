@@ -12,8 +12,8 @@ tags:
 下载地址：
 [直接下载](http://img.oldcai.com/EFIs/z390-i5-9600kf-EFI.zip) (不保证长期可以访问）
 
-[百度网盘](https://pan.baidu.com/s/h12JsNLg4tASF1si-ObSO04w)
-提取码: h6vt
+[百度网盘](https://pan.baidu.com/s/1WnyfbuVqHUSKE86SarLdQA)
+提取码: rrdm
 
 已解决问题：
 * 能正常关机
