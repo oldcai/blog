@@ -112,8 +112,6 @@ theme_config:
   gravatar:
     email: oldcai@live.com
 
-  beian: 粤ICP备17038532号-1
-
   social_links:
     github: https://github.com/oldcai/
     twitter: https://twitter.com/oldcai
