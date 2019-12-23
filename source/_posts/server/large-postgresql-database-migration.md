@@ -32,11 +32,11 @@ Yes, we hope we can keep the service online while transferring data and switch i
 I have checked [How to Set-Up Master-Slave Replication for PostgreSQL 9.6 on Ubuntu 16.04](https://www.howtoforge.com/tutorial/how-to-set-up-master-slave-replication-for-postgresql-96-on-ubuntu-1604/) and tried many times of making replicas on the new server but always fail.
 It reports the same error: `requested WAL segment 00000001000001CD00000055 has already been removed` every time.
 
-After did some research and I found that's because my database is too big, transfer would take too much time, and the `wal_keep_segments` is not enough for that long time of transferring files.
+After did some research and I found that's because my database is too large, transfer would take too much time, and the `wal_keep_segments` is not enough for that long time of transferring files.
 
 ### Quick Fix
 
-Maybe it can be fixed by increasing `wal_keep_segments` to a bigger number, but that introduces another problem: we need to calculate the proper number, enough keeping WAL files after the long and unsure time of data transferring, and not too big that would slow down the running service.
+Maybe it can be fixed by increasing `wal_keep_segments` to a greater number, but that introduces another problem: we need to calculate the proper number, enough keeping WAL files after the long and unsure time of data transferring, and not too big that would slow down the running service.
 Of course, that's not **the best solution**.
 
 ### Better Solutions
@@ -64,7 +64,7 @@ Then restart the PostgreSQL service by `service postgresql-9.6 restart`.
 
 ## Step 2 - Creating a Replication Slot
 
-Connect to PostgreSQL by `sudo -u postgres psql`
+Connect to master PostgreSQL by `sudo -u postgres psql`
 Then execute
 ```
 select pg_create_physical_replication_slot('slot_for_migration', true);
@@ -82,7 +82,7 @@ Use it after remove the initial prime if you know what this command would do.
 
 ## Step 3 - Create a User for Replication
 
-Run in psql as user postgres:
+Run commands with psql as user postgres on the master side:
 
 ```
 CREATE USER replica REPLICATION LOGIN ENCRYPTED PASSWORD 'your password here';
@@ -105,20 +105,23 @@ Then restart the PostgreSQL server.
 
 ## Step 4 - Transfer Data From Another Data Center
 
-Run on the slave server:
+Now, run on the slave server:
 ```
 pg_basebackup -h 10.10.10.10 -p 5432 -S slot_for_migration -U replica -D /var/lib/pgsql/9.6/data --checkpoint=fast -R -P -X stream
 ```
 
-It would ask you to type password, and after that, you need to wait for it until it finished syncing. This step is very time consuming, always takes hours or even days.
+It would ask you to type password.
+Now, you need to wait until it finishes syncing. This step is very time consuming, usually takes hours or even days.
 
 ## Step 5 - Restart The Slave PostgreSQL Server
 
-After run `service postgresql-9.6 restart`, there should be a sync before the standby server up and run, wouldn't take too long if you didn't leave the console too long after step 4.
+After syncing finished, run `service postgresql-9.6 restart`, there should be a sync before the standby server up and run, wouldn't take too much time if you didn't leave the console too long after step 4.
 
-Then we can connect to the server now by using psql and do some check, make sure your data are the latest.
+We are almost there. Now, we can connect to the server by psql and do some check, make sure our data are the latest.
 
 ## Step 6 - Promote the Slave to Master Like a King
+
+Finally, we still need to promote our slave postgresql server to master before we finish our database migration.
 
 ```
 pg_ctl promote -D
