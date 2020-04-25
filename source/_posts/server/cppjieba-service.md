@@ -9,7 +9,9 @@ tags:
   - cpp
 ---
 
-有需要的朋友，可以使用：
+有需要的朋友，可以到[dockerhub cppjieba-service页面](https://hub.docker.com/repository/docker/oldcai/cppjieba-service)了解更多
+
+使用方法：
 
 ```
 docker pull oldcai/cppjieba-service:latest
@@ -29,3 +31,4 @@ Output:
 ```
 
 有问题或者建议欢迎留言
+
