@@ -21,8 +21,10 @@ Here are the commands to free those disk:
 
 ## Steps
 
-1. ```journalctl --vacuum-size=1G```
-2. ```yum clean all```
+```
+journalctl --vacuum-size=1G
+yum clean all
+```
 
 ## A Little Explanation
 
