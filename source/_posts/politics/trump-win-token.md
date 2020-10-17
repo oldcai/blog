@@ -12,13 +12,13 @@ date: 2020-10-16 12:42:44
 
 在和一些小朋友探讨后，他们怂恿我去买一个基于加密货币的金融衍生品，一个叫做TRUMPWIN的token。看了一下，赔率是1/0.361=2.77的样子
 
-[点这里看token介绍](https://support.poloniex.com/hc/en-us/articles/360052070213-TRUMPWIN-TRUMPLOSE-Are-Now-on-Poloniex)
+[点这里看TRUMPWIN token介绍](https://support.poloniex.com/hc/en-us/articles/360052070213-TRUMPWIN-TRUMPLOSE-Are-Now-on-Poloniex)
 
 [点这里进交易页面](https://poloniex.com/exchange/USDT_TRUMPWIN)
 
 其实在传统博彩网站上，早就有类似的盘口。
 
-参考[betfair](https://www.betfair.com/sport/politics/2020-us-presidential-election/10393583)上的押注情况，川普目前赔率在2.88，拜登在1.4
+参考[oddschecker](https://www.oddschecker.com/politics/us-politics/us-presidential-election-2020/winner)上的押注情况，川普目前赔率在2.88，拜登在1.4
 
 ## 这就很有趣了
 
