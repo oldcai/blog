@@ -1,4 +1,11 @@
-
+---
+title: Why can't I trade options in TD Ameritrade?
+date: 2020-11-16 10:37:26
+categories:
+  - Options
+tags:
+  - TD Ameritrade
+---
 
 ## Reasons Why Options Trading Not Available
 
