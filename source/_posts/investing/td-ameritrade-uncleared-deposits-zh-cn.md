@@ -35,7 +35,9 @@ tags:
 
 会看到uncleared deposits
 
-![2020-11-16 at 10.18 am](media/2020-11-16%20at%2010.18%20am.jpg)
+
+![2020-11-16 at 10.18 am](https://i.imgur.com/HByXdGp.jpg)
+
 
 等到结清后即可。
 

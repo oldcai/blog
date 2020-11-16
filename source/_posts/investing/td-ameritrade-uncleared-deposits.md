@@ -35,7 +35,8 @@ Or find in the navigation bar as below.
 1. Click > Cash available for withdrawal
 2. You'll see > Uncleared deposits
 
-![2020-11-16 at 10.18 am](media/2020-11-16%20at%2010.18%20am.jpg)
+
+![2020-11-16 at 10.18 am](https://i.imgur.com/HByXdGp.jpg)
 
 You can wait until TD Ameritrade clears your deposits.
 
