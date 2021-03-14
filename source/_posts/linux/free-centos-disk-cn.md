@@ -1,5 +1,5 @@
 ---
-title: 2个命令清理至少10GB CentOS磁盘
+title: 怎样清理CentOS磁盘？3个命令清理至少10GB CentOS空间
 date: 2020-07-12 09:07:45
 categories:
   - Linux
@@ -37,5 +37,14 @@ journalctl --vacuum-size=1G
 yum clean all
 ```
 
+### 第三个命令
+
+清理老内核包
+
+```
+package-cleanup --oldkernels --count=1
+```
+
+运行了几年的系统，通常也能清理出几百M。
 
 运行这些命令后，我的VPS系统释放了大约12GB的空间，然后又重新满血复活。
