@@ -1,5 +1,6 @@
 ---
-title: Better Way to Migrate an In-Production PostgreSQL Database to a Different Data Center or Cloud
+title: Migrate Postgresql Database Without Downtime
+subtitle: How to Migrate an In-Production PostgreSQL Database to a Different Data Center or Cloud Without Downtime
 date: 2018-11-28 01:05:00
 categories:
   - Server
