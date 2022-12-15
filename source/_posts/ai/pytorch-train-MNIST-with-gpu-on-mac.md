@@ -14,7 +14,7 @@ We'll also include some benchmark results to give you an idea of the potential s
 
 ## MPS acceleration is available on MacOS 12.3+
 
-If you have the anaconda or miniconda installed. You can install it by using command `conda install pytorch torchvision torchaudio -c pytorch-nightly`
+If you have the anaconda or miniconda installed. You can install it by using command `conda install pytorch torchvision -c pytorch-nightly`
 
 Here is the GPU utilisation after using this version of pytorch to train the MNIST handwriting dataset.
 
