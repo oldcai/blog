@@ -189,7 +189,9 @@ Executed in  141.26 secs    fish           external
    sys time   69.79 secs    1.19 millis   69.79 secs   
 ```
 
-They are both the CPU and GPU on the M2 chip. The time spent using CPUs is about 2.5 times of using GPUs.
+Both the CPU and GPU in this benchmark were on the same M2 chip.
 
-Although it's not too much of an improvement if compared to the newest NVIDIA GPUs, it is still a great leap for Mac users in the Machine Learning world.
+The time spent with the CPU was 141.26 seconds, about 2.5 times the GPU version.
+
+Although it's not too much of an improvement if compared to the newest NVIDIA GPUs, it is still a great leap for Mac users in the Machine Learning field.
 
