@@ -12,7 +12,9 @@ If you're a Mac user and looking to leverage the power of your new Apple Silicon
 
 We'll also include some benchmark results to give you an idea of the potential speedup you can expect. So if you're ready to get started with PyTorch on your M2 chip, read on!
 
-## MPS acceleration is available on MacOS 12.3+
+## How to Install
+
+Note that the MPS acceleration is not available until macOS 12.3+
 
 If you have the anaconda or miniconda installed. You can install it by using command `conda install pytorch torchvision -c pytorch-nightly`
 
@@ -143,6 +145,8 @@ for epoch in range(10):
 
 
 It's 1.5 times faster than the CPU version of code.
+
+## Benchmark
 
 The output of the MPS version, which utilises the GPU, is as below.
 
