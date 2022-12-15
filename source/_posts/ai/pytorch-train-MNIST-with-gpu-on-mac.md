@@ -1,5 +1,5 @@
 ---
-title: Pytorch Train Mnist With GPU Acceleration on Mac
+title: Train PyTorch With GPU Acceleration on Mac, Apple Silicon M2 Chip Machine Learning Benchmark
 date: 2022-12-15 22:24:09
 categories:
   - ai
@@ -7,6 +7,10 @@ tags:
   - pytorch
   - mac
 ---
+
+If you're a Mac user and looking to leverage the power of your new Apple Silicon M2 chip for machine learning with PyTorch, you're in luck. In this blog post, we'll cover how to set up PyTorch and optimizing your training performance with GPU acceleration on your M2 chip.
+
+We'll also include some benchmark results to give you an idea of the potential speedup you can expect. So if you're ready to get started with PyTorch on your M2 chip, read on!
 
 ## MPS acceleration is available on MacOS 12.3+
 
@@ -18,7 +22,7 @@ Here is the GPU utilisation after using this version of pytorch to train the MNI
 
 ## Show Me the Code
 
-This demo uses PyTorch to build a handwriting recognition model. This code uses the MNIST dataset, which consists of images of handwritten digits, and trains a convolutional neural network (CNN) to classify the images.
+This demo uses PyTorch to build a handwriting recognition model. It also uses the MNIST dataset, which consists of images of handwritten digits, and trains a convolutional neural network (CNN) to classify the images.
 
 ```
 import torch
