@@ -5,4 +5,6 @@ git add source/
 git commit -am 'updated'
 git push &
 
-gd
+hexo clean
+hexo g
+hexo d
