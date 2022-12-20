@@ -5,7 +5,7 @@ categories:
   - ai
 tags:
   - pytorch
-  - mac
+  - macOS
 ---
 
 If you're a Mac user and looking to leverage the power of your new Apple Silicon M2 chip for machine learning with PyTorch, you're in luck. In this blog post, we'll cover how to set up PyTorch and optimizing your training performance with GPU acceleration on your M2 chip.
