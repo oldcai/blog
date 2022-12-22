@@ -111,8 +111,10 @@ disqus_shortname: oldcai
 theme_config:
   nav:
     home: /
-    Friends: /friends/
-    articles: /archives/
+    categories: /categories/
+    tags: /tags/
+    friends: /friends/
+    archives: /archives/
     search: /search/
 
   search:
@@ -132,8 +134,17 @@ theme_config:
 
   gravatar:
     email: oldcai@live.com
+    hash: 9141b902f6fe3f0fb088b03b750aa8ed
 
   social_links:
     github: https://github.com/oldcai/
     twitter: https://twitter.com/oldcai
     mail: javascript:window.open(atob('bWFpbHRvOm9sZGNhaUBsaXZlLmNvbQ'))
+
+  cdn:
+    enable: true
+    jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
+    clipboard: https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js
+    font_awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css
+    justified_gallery_css: https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css
+    justified_gallery_js: https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js
