@@ -2,9 +2,9 @@
 title: 把cppjieba打包成了Docker镜像
 date: 2019-08-01 00:52:00
 categories:
-  - Server
+  - Machine Learning
+  - NLP
 tags:
-  - 自然语言
   - docker
   - cpp
 ---

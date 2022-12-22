@@ -110,17 +110,12 @@ disqus_shortname: oldcai
 
 theme_config:
   nav:
-    home: /
-    categories: /categories/
-    tags: /tags/
-    friends: /friends/
-    archives: /archives/
-    search: /search/
-
-  search:
-    path: search.xml
-    field: post
-    content: true
+    Home: /
+    Categories: /categories/
+    Tags: /tags/
+    Friends: /friends/
+    Archives: /archives/
+    Search: /search/
 
   rss: atom.xml
 
