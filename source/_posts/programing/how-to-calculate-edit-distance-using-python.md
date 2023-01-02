@@ -21,13 +21,14 @@ s2 = "sitting"
 edit_distance = Levenshtein.distance(s1, s2)
 
 print(edit_distance)
+# output: 3
 ```
 
 This will output the edit distance between the two strings, which in this case is 3 (since three operations are required to transform "kitten" into "sitting": change "k" to "s", insert "i", and insert "g").
-You can also use the distance method to calculate the normalised edit distance by setting the optional normalised parameter to True. This will return the edit distance as a float in the range [0, 1], where 0 means the strings are identical and 1 means they are completely different.
-
 
 ## Normalise the Edit Distance
+
+You can also use the distance method to calculate the normalised edit distance by setting the optional normalised parameter to True. This will return the edit distance as a float in the range [0, 1], where 0 means the strings are identical and 1 means they are completely different.
 
 ```python
 import Levenshtein
@@ -40,8 +41,7 @@ print(normalized_edit_distance)
 # output: 0.42857142857142855
 ```
 
-The output of the first script will be an integer representing the edit distance between the two strings. In this case, the output will be 3.
-The output of the second script will be a float representing the normalized edit distance between the two strings. The value will be in the range [0, 1], where 0 means the strings are identical and 1 means they are completely different. In this case, the output will be a value close to 0.42, since three operations are required to transform "kitten" into "sitting": change "k" to "s", insert "i", and insert "g".
+The output will be a float representing the normalized edit distance between the two strings. The value will be in the range [0, 1], where 0 means the strings are identical and 1 means they are completely different. In this case, the output will be a value close to 0.42, since three operations are required to transform "kitten" into "sitting": change "k" to "s", insert "i", and insert "g" and the max length of two strings is 7.
 
 ## Troubleshooting
 
