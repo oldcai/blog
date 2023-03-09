@@ -6,6 +6,7 @@ title: 友链
 
 友链在此处展示：
 
+[皮卡](https://www.kuaikan.ltd/)
 [西西里](https://xixi.li/)
 [isnowfy](http://www.isnowfy.com/)
 [Aura Marker Studio](http://www.auramarker.com/)

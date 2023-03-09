@@ -48,3 +48,6 @@ package-cleanup --oldkernels --count=1
 运行了几年的系统，通常也能清理出几百M。
 
 运行这些命令后，我的VPS系统释放了大约12GB的空间，然后又重新满血复活。
+
+怎么样，只是清理日志的小技巧就已经节省了这么多空间了，如果你想了解如何深度清理 Linux 服务器，可以阅读这篇文章：《[如何深度清理 CentOS 服务器](/linux/centos-disk-deep-clean-cn/)》，其中也包括了清理 CentOS 系统磁盘空间的一些进阶技巧。
+
