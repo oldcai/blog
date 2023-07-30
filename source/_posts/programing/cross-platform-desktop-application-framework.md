@@ -1,7 +1,17 @@
 ---
 title: 跨平台桌面应用程序开发框架比较：Electron、NW.js、Qt、JavaFX 和 NeutralinoJS
 date: 2023-03-09 12:01:54
-tags: 跨平台桌面应用程序, Electron, NW.js, NeutralinoJS, Qt, JavaFX, 比较分析, 开发框架, Web技术, 软件开发
+tags: 
+	- 跨平台桌面应用程序
+	- Electron
+	- NW.js
+	- NeutralinoJS
+	- Qt
+	- JavaFX
+	- 比较分析
+	- 开发框架
+	- Web技术
+	- 软件开发
 ---
 
 ## 常用跨平台框架

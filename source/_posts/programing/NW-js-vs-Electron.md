@@ -1,7 +1,10 @@
 ---
 title: 跨平台桌面应用程序开发框架比较：NW.js 和 Electron 哪个好？
 date: 2023-03-09 15:09:14
-tags: 跨平台桌面应用程序, Electron, NW.js
+tags: 
+	- 跨平台桌面应用程序
+	- Electron
+	- NW.js
 ---
 
 ## Electron 和 Electron 怎么选
