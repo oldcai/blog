@@ -1,6 +1,6 @@
 ---
 title: M2 PyTorch Benchmark Analysis: Exploring Performance on M2 Pro, M2 Max, and M2 Ultra Chips
-date: 2024-01-29 18:24:09
+date: 2024-01-29 18:14:09
 categories:
   - ai
 tags:
