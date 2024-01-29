@@ -5,6 +5,7 @@ categories:
   - ai
 tags:
   - pytorch
+  - benchmark
   - macOS
 ---
 
