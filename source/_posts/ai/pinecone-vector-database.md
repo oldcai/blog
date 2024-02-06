@@ -63,7 +63,7 @@ pip install -U pinecone-client
 pip install -U langchain
 pip install -U langchain-community
 pip install -U langchain-openai
-pip install -U pypdfp
+pip install -U pypdf
 ```
 
 首先，安装并引入我们将要使用的库，通过运行`!pip install langchain --upgrade`来更新langchain库，以及`!pip install pypdfp`来安装处理PDF的库。如果你在处理非结构化PDF时遇到问题，可以尝试使用`PyPDFLoader`。
