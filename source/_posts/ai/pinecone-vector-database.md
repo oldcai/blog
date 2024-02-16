@@ -1,5 +1,5 @@
 ---
-title: LangChain Pinecone ChatGPT手把手教程|从0开始使用向量数据库
+title: 从0开始写出一个基于语义的Pdf搜索、对话应用
 date: 2024-02-05 20:16:04
 tags:
     - Pinecone
@@ -9,7 +9,7 @@ tags:
     - LangChain
 ---
 
-一步步动手用GPT做Embedding，用Pinecone做Vector Database，做一个用语义搜索PDF的小应用。
+今天老蔡带你一步步动手用GPT做Embedding，用Pinecone做向量数据库Vector Database，做一个用语义搜索PDF并借助ChatGPT用PDF内容和你对话的小应用。
 
 前情提要：
 
