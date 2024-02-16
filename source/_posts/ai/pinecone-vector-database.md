@@ -1,12 +1,14 @@
 ---
-title: 从0开始写出一个基于语义的Pdf搜索、对话应用
+title: 从0开始写出一个基于语义的Pdf搜索、对话的大模型RAG应用
 date: 2024-02-05 20:16:04
 tags:
     - Pinecone
-    - Vector Database
+    - 向量数据库
     - GPT
     - Embedding
     - LangChain
+    - 大模型
+    - RAG
 ---
 
 今天老蔡带你一步步动手用GPT做Embedding，用Pinecone做向量数据库Vector Database，做一个用语义搜索PDF并借助ChatGPT用PDF内容和你对话的小应用。
