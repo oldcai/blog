@@ -1,5 +1,5 @@
 ---
-title: 从0开始写出一个基于语义的Pdf搜索、对话的大模型RAG应用
+title: 教程:基于语义PDF搜索、对话的大模型RAG应用
 date: 2024-02-05 20:16:04
 tags:
     - Pinecone
