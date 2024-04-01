@@ -7,9 +7,9 @@ tags:
 	- NW.js
 ---
 
-## Electron 和 Electron 怎么选
+## Electron 和 NW.js 怎么选
 
-### 详细对比 NeutralinoJS 和 Electron
+### 详细对比 NW.js 和 Electron
 
 以下是 NW.js 和 Electron 的一些比较：
 
