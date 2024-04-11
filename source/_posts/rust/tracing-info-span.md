@@ -29,15 +29,35 @@ tags:
 use tracing::{info, info_span};
 
 fn main() {
+    tracing_subscriber::fmt::init();
+
     // 使用 info 记录简单消息
     info!("Hello, world!");
 
     // 使用 info_span 记录需要测量执行时间的代码块
     let span = info_span!("long_running_operation");
-    // 模拟耗时操作
-    std::thread::sleep(std::time::Duration::from_secs(1));
-    span.finish();
+    let _guard = span.enter();
+
+    span.in_scope(|| {
+        // 在 info_span 中记录消息
+        info!("Starting the long-running operation");
+
+        // 模拟耗时操作
+        std::thread::sleep(std::time::Duration::from_secs(1));
+
+        info!("Finished the long-running operation");
+    });
 }
+```
+
+#### 输出
+
+![output](https://i.imgur.com/0Pqon8f.png)
+
+```shell
+[INFO] Hello, world!
+[INFO] long_running_operation: Starting the long-running operation
+[INFO] long_running_operation: Finished the long-running operation
 ```
 
 ### 何时使用
