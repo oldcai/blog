@@ -59,4 +59,4 @@ The compiled file can be copied into the `/bin/` directory or any other director
 
 ## Additional Resources:
 
-[intel_gpu_frequency](https://www.oldcai.com/ai/intel-gpu-frequency/)
+[`intel_gpu_frequency`](https://www.oldcai.com/ai/intel-gpu-frequency/) allows you to override the automatic frequency control and set a fixed frequency value.

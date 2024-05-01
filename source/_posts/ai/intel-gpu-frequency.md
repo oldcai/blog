@@ -6,10 +6,9 @@ categories:
 tags:
   - Intel GPU
 ---
+![Tweaking and Tuning using intel_gpu_frequency](https://i.imgur.com/Yp2lZAs.jpg)
 
 `intel_gpu_frequency` is a valuable tool for fine-tuning your Intel GPU's performance. This tool empowers you to manually control your Intel GPU's frequencies, allowing for performance optimisation or debugging tasks. In this instalment of our "[intel-gpu-tools](https://www.oldcai.com/ai/intel-gpu-tools/)" series, we'll delve into manipulating Intel GPU frequencies.
-
-![Tweaking and Tuning using intel_gpu_frequency](https://i.imgur.com/Yp2lZAs.jpg)
 
 ### How it Works
 
@@ -27,7 +26,9 @@ The syntax for `intel_gpu_frequency` is as follows:
 ```
 intel_gpu_frequency [OPTIONS]
 ```
+
 ![intel-gpu-tools for Optimal Performance](https://i.imgur.com/ceeuaGy.png)
+
 
 ### Available Options:
 
