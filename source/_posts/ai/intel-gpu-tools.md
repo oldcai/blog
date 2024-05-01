@@ -57,4 +57,6 @@ The graphics memory usage of the Arc card is displayed in the `Device Memory Use
 
 The compiled file can be copied into the `/bin/` directory or any other directory within the $PATH environment variable. Once the file is in the correct directory, you can run the tool using the `sysmon` command.
 
+## Additional Resources:
 
+[intel_gpu_frequency](https://www.oldcai.com/ai/intel-gpu-frequency/)
