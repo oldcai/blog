@@ -1,5 +1,5 @@
 ---
-title: 使用 DSPy 的 8 个步骤
+title: 怎样使用DSPy？任何DSPy项目都能套用的8个步骤
 date: 2024-05-28 00:18:38
 tags:
     - DSPy
@@ -24,7 +24,7 @@ tags:
 ### 模块选择
 
 决定是否需要思维链步骤、检索功能或其他工具（如计算器或日历 API）。
-几乎每个任务都可以从一个简单的 [dspy.ChainofThought](https://dspy-docs.vercel.app/api/modules/ChainOfThought) 模块开始，然后逐步增加复杂性。
+几乎每个任务都可以从一个简单的 [dspy.ChainofThought](/ai/dspy-chain-of-thought/) 模块开始，然后逐步增加复杂性。
 
 ## 3) 探索示例
 
@@ -60,7 +60,7 @@ tags:
 根据数据和指标，优化你的程序。
 
 **优化器选择：**
-* 10个示例：使用 [`BootstrapFewShot`](https://dspy-docs.vercel.app/docs/deep-dive/teleprompter/bootstrap-fewshot)。
+* 10个示例：使用 [`BootstrapFewShot`](/ai/bootstrap-fewshot/)。
 * 50个示例：使用 [`BootstrapFewShotWithRandomSearch`](https://dspy-docs.vercel.app/docs/deep-dive/teleprompter/bootstrap-fewshot)。
 * 300个或更多示例：使用 [`MIPRO`](https://dspy-docs.vercel.app/docs/deep-dive/teleprompter/signature-optimizer)。
 * 高效程序：使用 `BootstrapFinetune` 将大 LM 编译为小 LM。
