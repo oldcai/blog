@@ -8,7 +8,7 @@ tags:
 在编译 DSPy 程序时，我们通常会调用一个称为 `teleprompter` 的优化器。它接受程序、训练集和度量标准，并返回一个优化后的新程序。
 不同的 teleprompters 使用不同的优化策略。本系列 teleprompters 专注于优化 few-shot 示例。让我们通过一个示例管道来了解 teleprompter 如何优化它。
 
-## 设置示例管道
+## 设置管道
 
 我们将基于 `GSM8K` 数据集创建一个基础答案生成管道，这与 [最小示例](https://dspy-docs.vercel.app/docs/quick-start/minimal-example) 中的例子类似，不做任何修改！首先，配置语言模型（LM），使用 `gpt-3.5-turbo` 作为 LLM。
 
