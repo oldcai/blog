@@ -14,6 +14,9 @@ DSPy 是一款功能强大的框架。
 [怎样开始？任何DSPy项目都能套用的8个步骤](https://www.oldcai.com/ai/dspy-8-steps/)
 [思考链ChainOfThought教程](https://www.oldcai.com/ai/dspy-chain-of-thought/)
 
+[优化器 optimizer](https://www.oldcai.com/ai/dspy-optimizers/)
+
+[Few shot](https://www.oldcai.com/ai/bootstrap-fewshot/)
 
 ## 传统 LLM 使用的挑战
 
@@ -73,4 +76,9 @@ DSPy 可用于各种 LM 应用，包括：
 
 [8个步骤开始使用 DSPy](https://www.oldcai.com/ai/dspy-8-steps/)
 [ChainOfThought教程](https://www.oldcai.com/ai/dspy-chain-of-thought/)
+
+[优化器 optimizer](https://www.oldcai.com/ai/dspy-optimizers/)
+
+[Bootstrap Few shot](https://www.oldcai.com/ai/bootstrap-fewshot/)
+
 
