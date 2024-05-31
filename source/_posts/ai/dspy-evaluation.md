@@ -73,11 +73,55 @@ def validate_context_and_answer(example, pred, trace=None):
 
 ### 长文本如何评分？（更聪明的方法）
 
-懂得递归的朋友肯定会说，这题我熟。
 聪明的我们，可以通过使用 AI 自己的能力，通过使用另一个 DSPy 程序给长文打分。
+懂得递归的朋友肯定会说，这题我熟。
+如果你的指标本身是一个DSPy程序，可以优化它本身后，再来迭代改进最终的程序。
 
 这个评分 DSPy 程序一般不会特别复杂，因为输出的指标是一个简单的值（如分数），可以通过收集示例来定义和优化。
-如果你的指标本身是一个DSPy程序，可以优化它本身后，再来迭代改进最终的程序。
+
+#### DSPy 评分程序举例
+
+例如，下面是一个简单的指标，使用 GPT-4o 检查生成的推文。
+
+这个评分程序给出评分问题的答案，评分问题甚至可以在metric中自定义。
+
+```python
+# 定义自动评分程序的签名。
+class Assess(dspy.Signature):
+    """根据指定维度评估推文的质量。"""
+
+    assessed_text = dspy.InputField()
+    assessment_question = dspy.InputField()
+    assessment_answer = dspy.OutputField(desc="Yes or No")
+```
+
+1. 是否正确回答了给定问题
+2. 是否具有吸引力
+3. 检查长度 `<= 280` 字符。
+
+```python
+gpt4T = dspy.OpenAI(model='GPT-4o', max_tokens=1000, model_type='chat')
+
+def metric(gold, pred, trace=None):
+    question, answer, tweet = gold.question, gold.answer, pred.output
+
+    engaging = "Does the assessed text make for a self-contained, engaging tweet?"
+    correct = f"The text should answer `{question}` with `{answer}`. Does the assessed text contain this answer?"
+
+    with dspy.context(lm=gpt4T):
+        correct = dspy.Predict(Assess)(assessed_text=tweet, assessment_question=correct)
+        engaging = dspy.Predict(Assess)(assessed_text=tweet, assessment_question=engaging)
+
+    correct, engaging = [m.assessment_answer.lower() == 'yes' for m in [correct, engaging]]
+    score = (correct + engaging) if correct and (len(tweet) <= 280) else 0
+
+    if trace is not None:
+        return score >= 2
+    return score / 2.0
+```
+
+在编译时，如果`trace is not None`，我们需要严格判断事情，所以只有在`score >= 2`时返回`True`。否则，我们返回一个1.0的分数（即`score / 2.0`）。
+
 
 ### 访问`trace`
 
@@ -96,6 +140,8 @@ def validate_hops(example, pred, trace=None):
 ```
 
 ## 推荐阅读
+
+- [准备 DSPy 训练数据](https://www.oldcai.com/ai/dspy-data/)
 
 - [DSPy教程：用 DSPy 自动优化大型语言模型 LLM 应用](https://www.oldcai.com/ai/dspy-tutorial/)
     
