@@ -37,7 +37,7 @@ class CoTSignature(dspy.Signature):
     """回答问题并给出理由。"""
     
     question = dspy.InputField(desc="关于某事的问题")
-    answer = dspy.OutputField(desc="通常在1到5个单词之间")
+    answer = dspy.OutputField(desc="通常在1到5个字之间")
 
 class CoTPipeline(dspy.Module):
     def __init__(self):
@@ -106,7 +106,7 @@ class CoTSignature(dspy.Signature):
 
     question = dspy.InputField(desc="关于某事的问题")
     reasoning = dspy.OutputField(desc="回答的理由", prefix="[理由]")
-    answer = dspy.OutputField(desc="通常在1到5个单词之间")
+    answer = dspy.OutputField(desc="通常在1到5个字之间")
 ```
 
 重新初始化Pipeline对象并重新评估管道，现在你就拥有了一个更强大的预测器！

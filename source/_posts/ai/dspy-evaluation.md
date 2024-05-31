@@ -15,36 +15,6 @@ tags:
 
 初次定义指标时，由简单开始，逐步迭代是关键。
 
-## 简单指标示例
-
-在DSPy中，指标就是一个Python函数，它接收`example`（如训练集或开发集中的样本）和程序的输出`pred`，并返回一个`float`（或`int`或`bool`）分数。
-
-你的指标函数也应该接受一个可选的第三个参数`trace`，虽然暂时可以忽略，但在优化时会派上用场。
-
-以下是一个简单的指标示例，比较`example.answer`和`pred.answer`，返回一个`bool`值。
-
-```python
-def validate_answer(example, pred, trace=None):
-    return example.answer.lower() == pred.answer.lower()
-```
-
-你也可以使用内置的实用工具，比如：
-- `dspy.evaluate.metrics.answer_exact_match`
-- `dspy.evaluate.metrics.answer_passage_match`
-
-复杂一些的指标示例：
-
-```python
-def validate_context_and_answer(example, pred, trace=None):
-    answer_match = example.answer.lower() == pred.answer.lower()
-    context_match = any((pred.answer.lower() in c) for c in pred.context)
-    
-    if trace is None:
-        return (answer_match + context_match) / 2.0
-    else:
-        return answer_match and context_match
-```
-
 ## 如何进行评估？
 
 定义好指标后，可以通过一个简单的Python循环进行评估。
@@ -68,11 +38,43 @@ evaluator(YOUR_PROGRAM, metric=YOUR_METRIC)
 
 对于大多数应用场景，系统会输出长文本，指标应检查输出的多个维度，甚至可以利用AI反馈。
 
-## 高级：使用DSPy程序作为指标
+## 简单指标示例
 
-如果你的指标本身是一个DSPy程序，可以通过优化它来迭代改进。这通常很容易，因为指标的输出是一个简单的值（如分数），可以通过收集示例来定义和优化。
+在DSPy中，指标就是一个Python函数，它接收`example`（如训练集或开发集中的样本）和程序的输出`pred`，并返回一个`float`（或`int`或`bool`）分数。
 
-### 高级：访问`trace`
+你的指标函数也应该接受一个可选的第三个参数`trace`，虽然暂时可以忽略，但在优化时会派上用场。
+
+以下是一个简单的指标示例，比较`example.answer`和`pred.answer`，返回一个`bool`值。
+
+```python
+def validate_answer(example, pred, trace=None):
+    return example.answer.lower() == pred.answer.lower()
+```
+
+你也可以使用内置的实用工具，比如：
+- `dspy.evaluate.metrics.answer_exact_match`
+- `dspy.evaluate.metrics.answer_passage_match`
+
+## 进阶 DSPy 指标示例
+
+### 多个简单指标叠加的指标示例
+
+```python
+def validate_context_and_answer(example, pred, trace=None):
+    answer_match = example.answer.lower() == pred.answer.lower()
+    context_match = any((pred.answer.lower() in c) for c in pred.context)
+    
+    if trace is None:
+        return (answer_match + context_match) / 2.0
+    else:
+        return answer_match and context_match
+```
+
+### 高级指标：使用DSPy程序作为指标
+
+如果你的指标本身是一个DSPy程序，可以通过优化它来迭代改进。这一般不难，因为指标的输出是一个简单的值（如分数），可以通过收集示例来定义和优化。
+
+### 访问`trace`
 
 在评估运行时，DSPy不会跟踪程序的步骤。但在优化期间，DSPy会跟踪你的语言模型调用。你可以利用这些跟踪信息来验证中间步骤。
 
@@ -88,5 +90,15 @@ def validate_hops(example, pred, trace=None):
     return True
 ```
 
-定义和优化指标是一个迭代过程，简单开始，逐步改进，借助AI反馈不断优化你的系统输出。希望这篇指南对你有所帮助，祝你在使用DSPy的过程中取得好成绩！
+## 推荐阅读
+
+- [DSPy教程：用 DSPy 自动优化大型语言模型 LLM 应用](https://www.oldcai.com/ai/dspy-tutorial/)
+    
+- [DSPy思考链ChainOfThought讲解](https://www.oldcai.com/ai/dspy-chain-of-thought/)
+    
+- [DSPy引导式少样本学习 - BootstrapFewShot讲解](https://www.oldcai.com/ai/bootstrap-fewshot/)
+    
+- [怎样使用DSPy？任何DSPy项目都能套用的8个步骤](https://www.oldcai.com/ai/dspy-8-steps/)
+
+定义和优化 DSPy 指标是一个迭代过程，简单开始，逐步改进，借助AI反馈不断优化你的系统输出。希望这篇指南对你有所帮助，让 DSPy 帮你如翼添虎😂
 
