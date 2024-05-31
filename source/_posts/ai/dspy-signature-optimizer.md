@@ -65,6 +65,8 @@ NUM_THREADS = 5
 evaluate = Evaluate(devset=devset, metric=validate_context_and_answer, num_threads=NUM_THREADS, display_progress=True, display_table=False)
 ```
 
+如果你想知道怎样添加训练数据，可以看看这篇：[添加 DSPy 训练data](https://www.oldcai.com/ai/dspy-data/)
+
 最后，我们创建`CoTPipeline`对象并进行评估：
 
 ```python
@@ -84,7 +86,7 @@ evaluate(cot_baseline, devset=devset_with_input)
 ```python
 from dspy.teleprompt import COPRO
 
-teleprompter = COPRO(
+optimizer = COPRO(
     metric=validate_context_and_answer,
     verbose=True,
 )
@@ -95,7 +97,7 @@ teleprompter = COPRO(
 ```python
 kwargs = dict(num_threads=64, display_progress=True, display_table=0)
 
-compiled_prompt_opt = teleprompter.compile(cot_baseline, trainset=devset, eval_kwargs=kwargs)
+compiled_prompt_opt = optimizer.compile(cot_baseline, trainset=devset, eval_kwargs=kwargs)
 ```
 
 优化完成后，我们根据输出结果手动更新签名类：
