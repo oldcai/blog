@@ -5,19 +5,20 @@ tags:
 	- DSPy
 ---
 
+## 什么是DSPy模块？
 **DSPy 模块**是构建语言模型（LM）程序的基础单元。
 
-- 每个模块都抽象了一个**提示技术**（如链式思维或 ReAct），能够处理任何 [DSPy 签名](https://www.oldcai.com/ai/dspy-signature/)。
+- DSPy模块是一种**封装提示技术**（如思维链或 ReAct），模块旨在处理任何 [DSPy Signature](https://www.oldcai.com/ai/dspy-signature/)。
 - DSPy 模块具有**可学习参数**，可以被调用以处理输入并返回输出。
 - 多个模块可以组合成更大的模块（程序），类似于 PyTorch 中的神经网络模块，但应用于语言模型程序。
 
-## 如何使用内置模块，如 `dspy.Predict` 或 `dspy.ChainOfThought`？
+## 如何使用模块 Module？
 
 我们先从最基本的 `dspy.Predict` 模块开始。所有其他 DSPy 模块都是基于 `dspy.Predict` 构建的。
 
 签名（Signature）是定义我们在 DSPy 中使用的任何模块行为的规范。如果还不了解，可以先过一遍 [DSPy 签名](https://www.oldcai.com/ai/dspy-signature/)。
 
-### 使用步骤
+### 示例 1：`dspy.Predict`
 
 1. **声明模块**：给模块一个签名。
 2. **调用模块**：使用输入参数调用模块。
@@ -38,7 +39,7 @@ response = classify(sentence=sentence)
 print(response.sentiment)  # 输出：Positive
 ```
 
-### 配置模块
+### 示例 2：`dspy.ChainOfThought`
 
 声明模块时，我们可以传递配置参数，例如请求多个结果：
 
@@ -81,6 +82,52 @@ Rationale: produce the answer. We can consider the fact that ColBERT has shown t
 Answer: One great thing about the ColBERT retrieval model is its superior efficiency and effectiveness compared to other models.
 ```
 
+### 示例 3：dspy.ProgramOfThought
+```python
+# 思考程序的示例问题
+question = '小明有 5 个苹果。她从商店又买了 7 个苹果。小明现在有多少个苹果？'
+
+# 声明并调用思维程序模块
+pot = dspy.ProgramOfThought('question -> answer')
+result = pot(question=question)
+
+# 打印最终预测答案
+print(f"Question: {question}")
+print(f"最终预测答案（思维过程结束后）：{result.answer}")
+
+# 输出：最终预测答案（思维过程结束后）：12
+```
+
+在本例中，dspy.ProgramOfThought 模块用于生成计算给定问题答案的可执行代码。该模块的声明签名为 `question -> answer`，并从结果中提取最终预测答案。
+
+### 示例 4：组合多个模块
+
+DSPy 就是 Python 代码，使用模块进行控制流。这类似于 PyTorch 的定义式计算图方法。你可以自由地调用和组合模块，创建强大的语言模型程序。参考入门教程了解更多细节。
+
+DSPy 允许组合多个模块，甚至在任何控制流中自由调用模块，类似于 PyTorch 的 "按运行定义"（define-by-run）方法。
+
+```python
+class CustomProgram(dspy.Module):
+    def __init__(self):
+        super().__init__()
+        self.cot = dspy.ChainOfThought('question -> answer')
+        self.react = dspy.ReAct('question -> answer')
+
+    def forward(self, question):
+        cot_response = self.cot(question=question)
+        react_response = self.react(question=question)
+        return cot_response, react_response
+
+# 使用示例
+program = CustomProgram()
+question = "使用 DSPy 有什么好处？"
+cot_response, react_response = program(question=question)
+print(cot_response.answer)
+print(react_response.answer)
+```
+
+在这个示例中，通过组合 dspy.ChainOfThought 模块和 dspy.ReAct 模块，创建了一个自定义程序。程序使用这两个模块处理一个问题，并返回各自的回复。
+
 ## 其他 DSPy 模块
 
 1. **`dspy.Predict`**：基本预测模块。
@@ -94,10 +141,6 @@ Answer: One great thing about the ColBERT retrieval model is its superior effici
 6. **`dspy.majority`**：投票模块，返回最受欢迎的响应。
 
 查看[每个模块的详细指南](https://www.oldcai.com/ai/dspy-8-steps/)获取更多示例。
-
-## 组合多个模块
-
-DSPy 就是 Python 代码，使用模块进行控制流。这类似于 PyTorch 的定义式计算图方法。你可以自由地调用和组合模块，创建强大的语言模型程序。参考入门教程了解更多细节。
 
 ### 进一步学习
 
