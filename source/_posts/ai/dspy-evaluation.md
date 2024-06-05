@@ -100,7 +100,7 @@ class Assess(dspy.Signature):
 3. 检查长度 `<= 280` 字符。
 
 ```python
-gpt4T = dspy.OpenAI(model='GPT-4o', max_tokens=1000, model_type='chat')
+gpt4o = dspy.OpenAI(model='GPT-4o', max_tokens=1000, model_type='chat')
 
 def metric(gold, pred, trace=None):
     question, answer, tweet = gold.question, gold.answer, pred.output
@@ -108,7 +108,7 @@ def metric(gold, pred, trace=None):
     engaging = "Does the assessed text make for a self-contained, engaging tweet?"
     correct = f"The text should answer `{question}` with `{answer}`. Does the assessed text contain this answer?"
 
-    with dspy.context(lm=gpt4T):
+    with dspy.context(lm=gpt4o):
         correct = dspy.Predict(Assess)(assessed_text=tweet, assessment_question=correct)
         engaging = dspy.Predict(Assess)(assessed_text=tweet, assessment_question=engaging)
 

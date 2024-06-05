@@ -1,5 +1,5 @@
 ---
-title: DSPy模块(Module)有哪些功能？如何使用它们优化AI模型？
+title: DSPy模块(dspy.Module)有哪些功能？如何使用它们优化AI模型？
 date: 2024-06-01 12:36:11
 tags:
 	- DSPy
@@ -12,9 +12,9 @@ tags:
 - DSPy 模块具有**可学习参数**，可以被调用以处理输入并返回输出。
 - 多个模块可以组合成更大的模块（程序），类似于 PyTorch 中的神经网络模块，但应用于语言模型程序。
 
-## 如何使用模块 Module？
+## 模块（dspy.Module)的基本构成
 
-我们先从最基本的 `dspy.Predict` 模块开始。所有其他 DSPy 模块都是基于 `dspy.Predict` 构建的。
+我们先从最基本的 `dspy.Predict` 开始。所有 DSPy 模块都是基于 `dspy.Predict` 构建的。
 
 签名（Signature）是定义我们在 DSPy 中使用的任何模块行为的规范。如果还不了解，可以先过一遍 [DSPy 签名](https://www.oldcai.com/ai/dspy-signature/)。
 
@@ -100,7 +100,9 @@ print(f"最终预测答案（思维过程结束后）：{result.answer}")
 
 在本例中，dspy.ProgramOfThought 模块用于生成计算给定问题答案的可执行代码。该模块的声明签名为 `question -> answer`，并从结果中提取最终预测答案。
 
-### 示例 4：组合多个模块
+## 如何使用模块 `dspy.Module`？
+
+### 示例 4：组合多个模块 `dspy.Module`
 
 DSPy 就是 Python 代码，使用模块进行控制流。这类似于 PyTorch 的定义式计算图方法。你可以自由地调用和组合模块，创建强大的语言模型程序。参考入门教程了解更多细节。
 
@@ -120,13 +122,21 @@ class CustomProgram(dspy.Module):
 
 # 使用示例
 program = CustomProgram()
-question = "使用 DSPy 有什么好处？"
+question = "使用 ChatGPT 有什么好处？"
 cot_response, react_response = program(question=question)
-print(cot_response.answer)
-print(react_response.answer)
+print("cot_response.answer:", cot_response.answer)
+print("react_response.answer:", react_response.answer)
+
+# Output
+cot_response.answer: ChatGPT 是一种基于大型语言模型的智能助手，由 OpenAI 开发。使用 ChatGPT 有以下几个好处：
+...
+
+react_response.answer: 
 ```
 
 在这个示例中，通过组合 dspy.ChainOfThought 模块和 dspy.ReAct 模块，创建了一个自定义程序。程序使用这两个模块处理一个问题，并返回各自的回复。
+
+可惜react还不成熟，所以即使跑完了所有iteration也还是没有返回结果。等后面成熟了我再写一篇说明文档。
 
 ## 其他 DSPy 模块
 
