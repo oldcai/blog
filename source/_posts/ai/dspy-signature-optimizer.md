@@ -126,5 +126,5 @@ class CoTSignature(dspy.Signature):
 
 ![Signature Optimizer](https://i.imgur.com/fBWuhaM.png)
 
-通过`COPRO`，你可以轻松提升语言模型的任务执行效果，从而在实际应用中取得更好的成果。
+通过`COPRO`，你可以轻松提升语言模型的任务执行效果，从而在实际应用中取得更好的效果。
 

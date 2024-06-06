@@ -141,14 +141,21 @@ def validate_hops(example, pred, trace=None):
 
 ## 推荐阅读
 
+- [evaluation不够细致？通过assert和suggest，微操优化结果](https://www.oldcai.com/ai/dspy-assertion/)
+
+### 进阶
+
+
 - [准备 DSPy 训练数据](https://www.oldcai.com/ai/dspy-data/)
 
-- [DSPy教程：用 DSPy 自动优化大型语言模型 LLM 应用](https://www.oldcai.com/ai/dspy-tutorial/)
-    
 - [DSPy思考链ChainOfThought讲解](https://www.oldcai.com/ai/dspy-chain-of-thought/)
-    
+
 - [DSPy引导式少样本学习 - BootstrapFewShot讲解](https://www.oldcai.com/ai/bootstrap-fewshot/)
     
+### 入门
+
+- [DSPy教程：用 DSPy 自动优化大型语言模型 LLM 应用](https://www.oldcai.com/ai/dspy-tutorial/)
+- 
 - [怎样使用DSPy？任何DSPy项目都能套用的8个步骤](https://www.oldcai.com/ai/dspy-8-steps/)
 
 定义和优化 DSPy 指标是一个迭代过程，简单开始，逐步改进，借助AI反馈不断优化你的系统输出。希望这篇指南对你有所帮助，让 DSPy 帮你如翼添虎😂
