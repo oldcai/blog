@@ -1,5 +1,5 @@
 ---
-title: PyCharm Error: getVirtualFile(...) must not be null
+title: "PyCharm Error: getVirtualFile(...) must not be null"
 date: 2024-06-08 15:11:15
 tags:
 	- PyCharm
