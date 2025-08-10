@@ -1,5 +1,5 @@
 ---
-title: Claude Code 可以做什么 - Claude Code 最佳实践
+title: Claude Code 可以做什么 - Claude Code 最佳实践 (一)
 date: 2025-08-10 23:51:54
 tags: 
 	- Vibe Coding
