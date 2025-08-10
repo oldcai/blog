@@ -120,7 +120,7 @@ theme_config:
   rss: atom.xml
 
   disqus:
-    enabled: true
+    enabled: false
     shortname: oldcai
 
   google_analytics:
