@@ -8,3 +8,6 @@ public/
 _multiconfig.yml
 themes/*
 .MWebMetaData/
+.env
+.env.*
+.semantic-search-*.json

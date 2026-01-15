@@ -143,3 +143,22 @@ theme_config:
     font_awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css
     justified_gallery_css: https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css
     justified_gallery_js: https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js
+
+# Semantic Search
+semantic_search:
+  enable: true
+  endpoint: https://search-oldcai-com.oldcai.workers.dev
+  writer_key: ${SEMANTIC_SEARCH_WRITER_KEY}
+  reader_key: 3vqaMk6L
+  sync:
+    auto: true
+    fields:
+      - title
+      - content
+      - excerpt
+      - tags
+      - categories
+  related_posts:
+    enable: true
+    limit: 5
+    min_score: 0.3
