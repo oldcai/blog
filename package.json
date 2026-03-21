@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
+    "build": "node --env-file-if-exists=.env ./node_modules/hexo-cli/bin/hexo generate",
+    "clean": "node --env-file-if-exists=.env ./node_modules/hexo-cli/bin/hexo clean",
+    "deploy": "node --env-file-if-exists=.env ./node_modules/hexo-cli/bin/hexo deploy",
+    "server": "node --env-file-if-exists=.env ./node_modules/hexo-cli/bin/hexo server",
+    "semantic-search:sync": "node --env-file-if-exists=.env ./node_modules/hexo-cli/bin/hexo semantic-search sync",
+    "semantic-search:full-sync": "node --env-file-if-exists=.env ./node_modules/hexo-cli/bin/hexo semantic-search full-sync",
+    "semantic-search:status": "node --env-file-if-exists=.env ./node_modules/hexo-cli/bin/hexo semantic-search status"
   },
   "hexo": {
     "version": "6.3.0"
@@ -21,7 +24,6 @@
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-stylus": "^2.1.0",
-    "hexo-semantic-search": "^0.1.12",
     "hexo-semantic-search-ai": "^1.0.0",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^0.0.3"
