@@ -1,6 +1,11 @@
 #!/usr/bin/env zsh
 source ~/.zshrc
 cd ~/programs/blog
+
+set -a
+[ -f .env ] && source .env
+set +a
+
 git add source/
 git commit -am 'updated'
 git push &
