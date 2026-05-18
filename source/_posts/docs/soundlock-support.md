@@ -5,8 +5,6 @@ tags:
     - Sound Lock
 ---
 
-# Sound Lock — Support
-
 Sound Lock is a tiny macOS menu-bar utility that locks your preferred audio input / output / system output and quietly switches them back whenever macOS auto-flips to a wrong device (most commonly when a Bluetooth headset's microphone forces playback into low-quality HFP/SCO).
 
 - **System requirements**: macOS 14.0+, Apple Silicon or Intel
